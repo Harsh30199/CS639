@@ -1,0 +1,20 @@
+// Control Flow Graph
+strict digraph {
+	0 [label=":varc = 6
+(:varc == 6)" shape=box]
+	2 [label=":__rep_counter_1 = :varc" shape=box]
+	3 [label="(:__rep_counter_1 != 0)" shape=box]
+	4 [label="penup
+forward 100
+back 50
+pendown
+:__rep_counter_1 = (:__rep_counter_1 - 1)
+False" shape=box]
+	10 [label=Termination shape=box]
+	0 -> 2
+	0 -> 10
+	2 -> 3
+	3 -> 4
+	3 -> 10
+	4 -> 3
+}

@@ -1,0 +1,20 @@
+Assignments Statements:
+res=0
+r=(n%10)
+n=(n//10)
+res+=(r**3)
+n=int(input())
+res=armstrong(n)
+n1=int(input('Enter 3 digit number: '))
+x=(n1%10)
+y=((n1//10)%10)
+z=(n1//100)
+
+Loop Conditions:
+n>0
+
+Branch Conditions:
+n==res
+99<n1<1000
+x<y<=z
+y!=z

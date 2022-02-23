@@ -1,0 +1,42 @@
+Input :
+
+python kachua.py --SBFL ./tests/mytest1.tl --buggy ./tests/mytest1_bug.tl -vars "[':x']" --timeout 10 --ntests 20 --popsize 100 --cxpb 1.0 --mutpb 1.0 --ngen 10 --verbose True
+
+
+Output :
+
+
+========== IR ==========
+
+0 (:x > 30)  [ 3 ]
+1 forward 70  [ 1 ]
+2 False  [ 2 ]
+3 forward 20  [ 1 ]
+4 backward 20  [ 1 ]
+
+
+--------------------------------Spectrum---------------------------------
+
+
+[[1 1 1 0 1 0]
+ [1 0 0 1 1 1]]
+
+
+--------------------------------Sorted Suspiciousness Score---------------------------------
+
+
+Component 3 : 1.0
+Component 4 : 0.7071067811865475
+Component 0 : 0.7071067811865475
+Component 2 : 0
+Component 1 : 0
+
+
+--------------------------------Rank List---------------------------------
+
+
+Component c0 : 3
+Component c1 : 5
+Component c2 : 4
+Component c3 : 1
+Component c4 : 2

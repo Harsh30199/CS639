@@ -1,0 +1,24 @@
+0 :optidist = 0 1
+1 :vara = 0 1
+2 (:vara == 0) 5
+3 :optidist = 0 1
+4 :optidist =   :optidist + 200 1
+5 right 0 1
+6 False 4
+7 :optidist = 0 1
+8 :optidist =   :optidist + 300 1
+9 right 0 1
+10 NOP 1
+11 right 0 1
+12 NOP 1
+13 forward  :optidist + 100 1
+14 :__rep_counter_1 = 10 1
+15 :optidist = 0 1
+16 (:__rep_counter_1 != 0) 7
+17 :optidist = 0 1
+18 :optidist = :optidist + 100 1
+19 forward  :optidist + 200 1
+20 :__rep_counter_1 = (:__rep_counter_1 - 1) 1
+21 right 90 1
+22 False -7
+

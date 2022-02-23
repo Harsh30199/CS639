@@ -1,0 +1,24 @@
+Assignments Statements:
+l=set()
+max1=0
+flag1=0
+(x,y,z)=tuple(l)
+max1=x
+flag1=1
+max1=y
+flag1=1
+max1=z
+flag1=1
+n=Numbers()
+
+Loop Conditions:
+_ in range(3)
+
+Branch Conditions:
+x>z and x>y
+x>0
+y>z and y>x
+y>0
+z>x and z>y
+z>0
+max1<=0 or not(flag1)

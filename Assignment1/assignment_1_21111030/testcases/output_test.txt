@@ -1,0 +1,13 @@
+Assignments Statements:
+squares={x:(x**2) for x in range(0,19,3) if (x%2)==0}
+s='For loop finished'
+cubes=[(y,(y**3)) for y in range(0,50,5)]
+cubes_mul_10=cubes[2::2]
+
+Loop Conditions:
+x in range(0,19,3)
+(x,y) in squares.items()
+y in range(0,50,5)
+
+Branch Conditions:
+(x%2)==0

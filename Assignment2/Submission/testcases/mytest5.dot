@@ -1,0 +1,52 @@
+// Control Flow Graph
+strict digraph {
+	0 [label=":m = 10
+:suma = -50
+:sumb = 50
+:__rep_counter_1 = :m" shape=box]
+	4 [label="(:__rep_counter_1 != 0)" shape=box]
+	5 [label=":a = 5
+:b = 9
+:c = -7
+:__rep_counter_2 = :a" shape=box]
+	9 [label="(:__rep_counter_2 != 0)" shape=box]
+	10 [label="(:suma < 0)" shape=box]
+	11 [label=":suma = (:suma + (:a - :c))" shape=box]
+	12 [label=":__rep_counter_2 = (:__rep_counter_2 - 1)
+False" shape=box]
+	14 [label=":c = (:c + 1)
+:__rep_counter_3 = :b" shape=box]
+	16 [label="(:__rep_counter_3 != 0)" shape=box]
+	17 [label="(:sumb != 0)" shape=box]
+	18 [label=":sumb = (:sumb - (:b + :c))" shape=box]
+	19 [label=":__rep_counter_3 = (:__rep_counter_3 - 1)
+False" shape=box]
+	21 [label=":c = (:c - 1)
+:__rep_counter_1 = (:__rep_counter_1 - 1)
+False" shape=box]
+	24 [label="(:suma != :sumb)" shape=box]
+	25 [label=":a = (:m * 5)
+:b = (:m * 2)" shape=box]
+	27 [label=Termination shape=box]
+	0 -> 4
+	4 -> 5
+	4 -> 24
+	5 -> 9
+	9 -> 10
+	9 -> 14
+	10 -> 11
+	10 -> 12
+	11 -> 12
+	12 -> 9
+	14 -> 16
+	16 -> 17
+	16 -> 21
+	17 -> 18
+	17 -> 19
+	18 -> 19
+	19 -> 16
+	21 -> 4
+	24 -> 25
+	24 -> 27
+	25 -> 27
+}

@@ -1,0 +1,74 @@
+// Control Flow Graph
+strict digraph {
+	0 [label=":optidist = 0
+:vara = 0
+:varb = 20
+forward  :optidist + (5 * :varb)
+:__rep_counter_1 = 4
+" shape=box]
+	5 [label=":optidist = 0
+(:__rep_counter_1 != 0)
+" shape=box]
+	7 [label=":optidist = 0
+backward  :optidist +  50
+right 315
+(:vara == 0)
+" shape=box]
+	11 [label=":optidist = 0
+:__rep_counter_2 = 4
+right 45
+" shape=box]
+	14 [label=":optidist = 0
+(:__rep_counter_2 != 0)
+" shape=box]
+	16 [label=":optidist = 0
+forward  :optidist + 25
+:__rep_counter_2 = (:__rep_counter_2 - 1)
+right 90
+False
+" shape=box]
+	21 [label=":optidist = 0
+:vara = 1
+False
+" shape=box]
+	24 [label=":optidist = 0
+:__rep_counter_3 = 3
+right 135
+" shape=box]
+	27 [label=":optidist = 0
+(:__rep_counter_3 != 0)
+" shape=box]
+	29 [label=":optidist = 0
+forward  :optidist + 25
+:__rep_counter_3 = (:__rep_counter_3 - 1)
+right 60
+False
+" shape=box]
+	34 [label=":optidist = 0
+:vara = 0
+right 30
+" shape=box]
+	37 [label=":optidist = 0
+forward  :optidist + 100
+:__rep_counter_1 = (:__rep_counter_1 - 1)
+False
+" shape=box]
+	41 [label=Termination
+ shape=box]
+	0 -> 5
+	5 -> 7
+	5 -> 41
+	7 -> 11
+	7 -> 24
+	11 -> 14
+	14 -> 16
+	14 -> 21
+	16 -> 14
+	21 -> 37
+	24 -> 27
+	27 -> 29
+	27 -> 34
+	29 -> 27
+	34 -> 37
+	37 -> 5
+}

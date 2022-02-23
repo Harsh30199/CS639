@@ -1,0 +1,108 @@
+mytest6 is same as the assignment tool
+
+Assignments Statements:
+assign=[]
+loop=[]
+condition=[]
+s=''
+m=(((' for '+typechecker(g['target']))+' in ')+typechecker(g['iter']))
+s+=m
+c=typechecker(f)
+s+=(' if '+c)
+op={'And':'and','Or':'or'}
+op={'Add':'+','Sub':'-','Mult':'*','Div':'/','FloorDiv':'//','Mod':'%','Pow':'**','Eq':'==','NotEq':'!=','Lt':'<','LtE':'<=','Gt':'>','GtE':'>=','Is':' is ','IsNot':' is not ','In':' in ','NotIn':' not in ','LShift':'<<','RShift':'>>','BitOr':'|','BitXor':'^','BitAnd':'&'}
+s=(((typechecker(t['value'])+'[')+typechecker(t['slice']))+']')
+s=((typechecker(t['lower'])+':')+typechecker(t['upper']))
+s=((s+':')+typechecker(t['step']))
+left=typechecker(t['left'])
+right=typechecker(t['right'])
+s='['
+s=((s+typechecker(e))+',')
+s='{'
+i=0
+s=((((s+typechecker(k))+':')+typechecker(t['values'][i]))+',')
+i+=1
+s='('
+s=((s+typechecker(e))+',')
+s='{'
+s=((s+typechecker(e))+',')
+s=typechecker(t['left'])
+s+=operator(t['ops'][i]['_type'])
+s+=typechecker(t['comparators'][i])
+s=''
+s=typechecker(t['values'][0])
+s=((((s+' ')+booloperator(t['op']['_type']))+' ')+typechecker(t['values'][v]))
+s=(typechecker(t['func'])+'(')
+s=((s+typechecker(a))+',')
+s=('{'+typechecker(t['key']))
+s+=(':'+typechecker(t['value']))
+s='lambda '
+s+=typechecker(a)
+s+=(':'+typechecker(t['body']))
+s=''
+s+=(typechecker(t)+'=')
+b=a['args']
+j=(len(b['args'])-len(b['defaults']))
+path=sys.argv[1]
+ast=ast2json(parse(open(path).read()))
+
+Loop Conditions:
+g in generators
+f in g['ifs']
+e in t['elts']
+k in t['keys']
+e in t['elts']
+e in t['elts']
+i in range(len(t['ops']))
+v in range(1,len(t['values']))
+a in t['args']
+a in t['args']['args']
+a in body
+t in a['targets']
+i in range(len(b['defaults']))
+a in assign
+a in loop
+a in condition
+
+Branch Conditions:
+t!=None
+t['_type']=='Name'
+t['_type']=='NameConstant'
+t['_type']=='Constant'
+type(t['value'])==str
+t['_type']=='Num'
+t['_type']=='Str'
+t['_type']=='Subscript'
+t['_type']=='Index'
+t['_type']=='Slice'
+t['step']!=None
+t['_type']=='BinOp'
+t['_type']=='List'
+t['_type']=='Dict'
+t['_type']=='Tuple'
+t['_type']=='Set'
+t['_type']=='Compare'
+t['_type']=='BoolOp'
+t['_type']=='UnaryOp'
+t['op']['_type']=='USub'
+t['op']['_type']=='Not'
+t['op']['_type']=='Invert'
+t['op']['_type']=='UAdd'
+t['_type']=='Call'
+not(len(t['args']))
+t['_type']=='Attribute'
+t['_type']=='ListComp'
+t['_type']=='arg'
+t['_type']=='DictComp'
+t['_type']=='SetComp'
+t['_type']=='Lambda'
+a['_type']=='Assign'
+a['_type']=='AugAssign'
+a['_type']=='If'
+a['_type']=='While'
+a['_type']=='For'
+a['_type']=='FunctionDef'
+a['_type']=='ClassDef'
+len(assign)
+len(loop)
+len(condition)

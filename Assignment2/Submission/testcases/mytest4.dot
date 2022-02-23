@@ -1,0 +1,25 @@
+// Control Flow Graph
+strict digraph {
+	0 [label=":x = 5
+:y = 10
+:z = 25
+(((:x > :y) or (:y == :x)) and (:x >= :z))" shape=box]
+	4 [label=":max = :x" shape=box]
+	5 [label="(((:y > :x) and (:x > :z)) or ((:y > :x) and (:y >= :z)))" shape=box]
+	6 [label=":max = :y" shape=box]
+	7 [label="(((:z > :x) or (:z > :y)) or ((:z == :x) and (:z == :y)))" shape=box]
+	8 [label="(:z > :max)" shape=box]
+	9 [label=":max = :z" shape=box]
+	10 [label=Termination shape=box]
+	0 -> 4
+	0 -> 5
+	4 -> 5
+	5 -> 6
+	5 -> 7
+	6 -> 7
+	7 -> 8
+	7 -> 10
+	8 -> 9
+	8 -> 10
+	9 -> 10
+}

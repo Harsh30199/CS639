@@ -1,0 +1,23 @@
+Assignments Statements:
+a=5
+b='*'
+flag1=flag2=0
+n=input('Enter single digit number: ')
+n=int(n)
+flag1=1
+m=input('Enter character for pattern between A-D ')
+flag2=1
+
+Loop Conditions:
+i in range((a+1))
+j in range(i)
+i in range((a-1),-1,-1)
+j in range(i)
+
+Branch Conditions:
+len(n)==1
+ord(n) in range(48,58)
+ord(m) in range(ord('A'),ord('E'))
+flag1 and not(flag2)
+not(flag1) and flag2
+not(flag1) and not(flag2)

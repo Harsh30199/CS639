@@ -1,0 +1,29 @@
+// Control Flow Graph
+strict digraph {
+	0 [label=":vara = 10
+:varb = 5
+:varc = (:vara * :varb)
+:__rep_counter_1 = :varc" shape=box]
+	4 [label="(:__rep_counter_1 != 0)" shape=box]
+	5 [label=":vard = (:vard + (:vara - :varb))
+:__rep_counter_2 = :vard" shape=box]
+	7 [label="(:__rep_counter_2 != 0)" shape=box]
+	8 [label=":vare = ((:vare + 5) * :vard)
+:__rep_counter_2 = (:__rep_counter_2 - 1)
+False" shape=box]
+	11 [label=":varef = (:vard - :vare)
+:__rep_counter_1 = (:__rep_counter_1 - 1)
+False" shape=box]
+	14 [label=":vara = :vare
+:varb = :varf" shape=box]
+	16 [label=Termination shape=box]
+	0 -> 4
+	4 -> 5
+	4 -> 14
+	5 -> 7
+	7 -> 8
+	7 -> 11
+	8 -> 7
+	11 -> 4
+	14 -> 16
+}

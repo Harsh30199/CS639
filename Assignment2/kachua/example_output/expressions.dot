@@ -1,0 +1,23 @@
+// Control Flow Graph
+strict digraph {
+	0 [label=":varc = 10
+((:varc == 0) and (:vara < :varb))" shape=box]
+	2 [label=":vara = 0
+:varb = 0
+:varb = ((:vara + :varb) * :varc)" shape=box]
+	5 [label="((:varc != 0) and (:vara < :varb))" shape=box]
+	6 [label=":varb = 0" shape=box]
+	7 [label="((:vara < :varb) or (:vara == :varb))" shape=box]
+	8 [label=":vara = 0
+:varb = (-5 + 10)" shape=box]
+	10 [label=Termination shape=box]
+	0 -> 2
+	0 -> 5
+	2 -> 5
+	5 -> 6
+	5 -> 7
+	6 -> 7
+	7 -> 8
+	7 -> 10
+	8 -> 10
+}

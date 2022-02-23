@@ -1,0 +1,14 @@
+// Control Flow Graph
+strict digraph {
+	0 [label=":__rep_counter_1 = 10" shape=box]
+	1 [label="(:__rep_counter_1 != 0)" shape=box]
+	2 [label=":vara = 0
+:varb = 0
+:__rep_counter_1 = (:__rep_counter_1 - 1)
+False" shape=box]
+	6 [label=Termination shape=box]
+	0 -> 1
+	1 -> 2
+	1 -> 6
+	2 -> 1
+}

@@ -1,0 +1,38 @@
+ -------------Symbolic Execution Parameters for Program with Constant Parameters------------------
+ 
+ 
+ -d '{":a": 2, ":b" : 22 }' -c '{":c1": 1, ":c2" :1, ":c3" : 1}'
+ 
+ 
+--------------Seed values for Symbolic Execution of First Program or Reference Program------------
+
+
+Value for a : 11
+Value for b : 22
+
+
+ -----------------Assertions / Constraints------------------
+ 
+ 
+ 2 + c2 + c2 + c2 == 38,
+ __rep_counter_2 == 0,
+ 6 + c3 + c3 + c3 + c3 + c3 == 61,
+ __rep_counter_3 == 0,
+ 6 + c3 + c3 + c3 + c3 + c3 == 61,
+ __rep_counter_3 == 0,
+ 9 + c1 + c1 == 49,
+ __rep_counter_1 == 0,
+ 11 + c1 + c1 == 51,
+ 8 + c3 + c3 + c3 + c3 + c3 == 63,
+ 8 + c3 + c3 + c3 + c3 + c3 == 63,
+ 0 + c2 + c2 + c2 == 36
+
+
+-----------------Constant Parameter Values------------------
+
+
+c1 = 20
+c3 = 11
+c2 = 12
+
+
